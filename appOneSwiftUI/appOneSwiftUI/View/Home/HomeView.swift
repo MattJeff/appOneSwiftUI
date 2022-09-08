@@ -13,13 +13,21 @@ struct HomeView: View {
     
     @Binding var showProfile:Bool
     @State var showUpdate = false
-    
+    @State var upShow = true
+    @Binding var showContent:Bool
     
     
    
     var body: some View {
         
-        VStack{
+        let dataRinView = [
+            RingView(color1: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), color2:#colorLiteral(red: 0.5149679184, green: 0.1725562215, blue: 1, alpha: 1), size: 44, pourcent: 67, show: true, upshow:$upShow, predicat: 0.0),
+            RingView(color1: #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), color2:#colorLiteral(red: 0.5149679184, green: 0.1725562215, blue: 1, alpha: 1), size: 44, pourcent: 67, show: true, upshow:$upShow, predicat: 0.0),
+            RingView(color1: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), color2:#colorLiteral(red: 0.5149679184, green: 0.1725562215, blue: 1, alpha: 1), size: 44, pourcent: 67, show: true, upshow:$upShow, predicat: 0.0),
+            RingView(color1: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), color2:#colorLiteral(red: 0.5149679184, green: 0.1725562215, blue: 1, alpha: 1), size: 44, pourcent: 67, show: true, upshow:$upShow, predicat: 0.0),
+        ]
+        
+        ScrollView{
             HStack{
                 VStack(alignment:.leading){
                     Text("\(Date().formatted(date: .abbreviated, time: .omitted))")
@@ -53,6 +61,33 @@ struct HomeView: View {
             }.padding(.horizontal)
                 .padding(.leading)
                 .padding(.top)
+            
+            
+            ScrollView(.horizontal,showsIndicators: false){
+                HStack(spacing:10){
+                    ForEach(dataRinView.indices){ index in
+                        HStack{
+                        dataRinView[index]
+                           
+                            VStack(alignment:.leading,spacing: 4){
+                                Text("6 minutes left").bold().modifier(FontModifier(style: .subheadline))
+                                
+                                Text("Watched 10 min today").modifier(FontModifier(style: .caption))
+                                
+                            }.modifier(FontModifier())
+                        }.padding(8)
+                            .background(.white)
+                            .cornerRadius(20)
+                            .modifier(shadowModifier())
+                            .padding(.bottom)
+                            .padding(.leading)
+                            .onTapGesture {
+                                self.showContent = true
+                            }
+  
+                    }
+                }.padding(.bottom)
+            }
          
             ScrollView(.horizontal,showsIndicators: false){
                 
@@ -75,7 +110,18 @@ struct HomeView: View {
                 }.padding()
                     .padding(.bottom,30)
                 
-            }
+            }.offset( y: -30)
+            
+            VStack{
+                HStack{
+            Text("Courses")
+                    .bold()
+                .modifier(CustomFontModifier())
+                .padding(.horizontal)
+                }.frame(maxWidth: .infinity,alignment:.leading)
+                
+                SectionView(section:sectionDate[2] ).padding(.horizontal)
+            }.padding(.horizontal)
             
            
             Spacer()
@@ -87,7 +133,7 @@ struct HomeView: View {
 
 struct  HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(showProfile: .constant(false))
+        HomeView(showProfile: .constant(false), showContent: .constant(false))
     }
 }
 

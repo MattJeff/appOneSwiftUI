@@ -31,13 +31,21 @@ struct AvatarView: View {
 struct Home: View {
     @State var showProfile = false
     @State var newState = CGSize.zero
+    @State var showContent = false
     var body: some View {
         ZStack{
             Color(.clear)
                 .ignoresSafeArea()
-         HomeView(showProfile: $showProfile)
+            HomeView(showProfile: $showProfile, showContent: $showContent)
                 .padding(.top,44)
-                .background(Color.white)
+                .background(
+                    VStack{
+                    LinearGradient(gradient: Gradient(colors: [Color("background2"),Color.white]), startPoint: .top, endPoint: .bottom)
+                            .frame( height: 200)
+                        Spacer()
+                    }.background(.white)
+                
+                )
                 .clipShape(RoundedRectangle(cornerRadius: 30))
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
                 .offset(y: showProfile ? -450 : 0)
@@ -71,6 +79,35 @@ struct Home: View {
                         }
                     }
                     )
+            
+            if showContent {
+                Color(.white).edgesIgnoringSafeArea(.all)
+                ContentView()
+                    .transition(.move(edge: .bottom))
+                    .animation(.spring())
+                    .offset( y: -30)
+                   
+                VStack{
+                HStack{
+                    
+                Image(systemName: "xmark")
+                        .padding()
+                    .foregroundColor(.white)
+                    .background(.black)
+                    .clipShape(Circle())
+                }.frame(maxWidth:.infinity,alignment:.trailing)
+                    Spacer()
+                }.padding()
+                   
+                    .onTapGesture {
+                        self.showContent = false
+                    }
+                    .transition(.move(edge: .bottom))
+                    .animation(.spring())
+                  
+            }
+            
+      
             
            
         }

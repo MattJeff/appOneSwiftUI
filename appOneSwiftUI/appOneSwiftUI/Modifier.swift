@@ -27,7 +27,7 @@ struct FontModifier:ViewModifier{
 
 struct CustomFontModifier:ViewModifier{
     var size:CGFloat = 28
-    var name = "MPLUSRounded1c-Bold"
+    var name:String = "Nunito-ExtraBold"
     func body(content: Content) -> some View {
         content.font(.custom(name, size: size))
     }

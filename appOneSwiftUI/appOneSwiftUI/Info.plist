@@ -4,11 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>WorkSans-Regular.ttf</string>
-		<string>WorkSans-Bold.ttf</string>
-		<string>MPLUSRounded1c-Bold.ttf</string>
-		<string>MPLUSRounded1c-Medium.ttf</string>
-		<string>MPLUSRounded1c-Regular.ttf</string>
+		<string>Nunito-ExtraBold.ttf</string>
 	</array>
 </dict>
 </plist>

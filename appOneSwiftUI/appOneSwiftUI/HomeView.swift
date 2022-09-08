@@ -25,7 +25,7 @@ struct HomeView: View {
                     Text("\(Date().formatted(date: .abbreviated, time: .omitted))")
                         .foregroundColor(.gray)
             Text("Watching")
-                .modifier(CustomFontModifier())
+                        .modifier(CustomFontModifier())
                 }
               
             Spacer()

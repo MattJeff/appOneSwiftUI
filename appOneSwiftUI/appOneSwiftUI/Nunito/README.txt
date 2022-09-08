@@ -1,36 +1,34 @@
-Work Sans Variable Font
-=======================
+Nunito Variable Font
+====================
 
-This download contains Work Sans as both variable fonts and static fonts.
+This download contains Nunito as both variable fonts and static fonts.
 
-Work Sans is a variable font with this axis:
+Nunito is a variable font with this axis:
   wght
 
 This means all the styles are contained in these files:
-  WorkSans-VariableFont_wght.ttf
-  WorkSans-Italic-VariableFont_wght.ttf
+  Nunito-VariableFont_wght.ttf
+  Nunito-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Work Sans:
-  static/WorkSans-Thin.ttf
-  static/WorkSans-ExtraLight.ttf
-  static/WorkSans-Light.ttf
-  static/WorkSans-Regular.ttf
-  static/WorkSans-Medium.ttf
-  static/WorkSans-SemiBold.ttf
-  static/WorkSans-Bold.ttf
-  static/WorkSans-ExtraBold.ttf
-  static/WorkSans-Black.ttf
-  static/WorkSans-ThinItalic.ttf
-  static/WorkSans-ExtraLightItalic.ttf
-  static/WorkSans-LightItalic.ttf
-  static/WorkSans-Italic.ttf
-  static/WorkSans-MediumItalic.ttf
-  static/WorkSans-SemiBoldItalic.ttf
-  static/WorkSans-BoldItalic.ttf
-  static/WorkSans-ExtraBoldItalic.ttf
-  static/WorkSans-BlackItalic.ttf
+in those cases you can use the static font files for Nunito:
+  static/Nunito-ExtraLight.ttf
+  static/Nunito-Light.ttf
+  static/Nunito-Regular.ttf
+  static/Nunito-Medium.ttf
+  static/Nunito-SemiBold.ttf
+  static/Nunito-Bold.ttf
+  static/Nunito-ExtraBold.ttf
+  static/Nunito-Black.ttf
+  static/Nunito-ExtraLightItalic.ttf
+  static/Nunito-LightItalic.ttf
+  static/Nunito-Italic.ttf
+  static/Nunito-MediumItalic.ttf
+  static/Nunito-SemiBoldItalic.ttf
+  static/Nunito-BoldItalic.ttf
+  static/Nunito-ExtraBoldItalic.ttf
+  static/Nunito-BlackItalic.ttf
 
 Get started
 -----------

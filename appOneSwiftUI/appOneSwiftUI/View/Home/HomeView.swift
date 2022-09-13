@@ -27,7 +27,7 @@ struct HomeView: View {
             RingView(color1: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), color2:#colorLiteral(red: 0.5149679184, green: 0.1725562215, blue: 1, alpha: 1), size: 44, pourcent: 67, show: true, upshow:$upShow, predicat: 0.0),
         ]
         
-        ScrollView{
+        ScrollView(showsIndicators:false){
             HStack{
                 VStack(alignment:.leading){
                     Text("\(Date().formatted(date: .abbreviated, time: .omitted))")
